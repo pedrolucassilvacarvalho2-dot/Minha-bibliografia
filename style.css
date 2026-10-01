@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light;
+  --text: #292820;
+  --muted: #66645b;
+  --paper: #f2f0e8;
+  --green: #38513b;
+  font-family: Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--text); font: 16px/1.7 Arial, sans-serif; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { color: var(--text); font-family: Arial, sans-serif; line-height: 1.3; }
+h1 { margin-bottom: 16px; font-size: clamp(30px, 6vw, 42px); }
+h2 { margin-bottom: 10px; font-size: 27px; }
+h3 { margin-bottom: 4px; font-size: 19px; }
+p { margin-bottom: 12px; } #cor { color: var(--green); font-weight: 700; }
+a { color: var(--green); text-underline-offset: 3px; }
+a:hover { color: var(--text); }
+img { display: block; max-width: 100%; }
+
+.page { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
+.introduction { display: grid; grid-template-columns: 1fr 230px; align-items: center; gap: 36px; padding: 42px 0 38px; }
+.introduction-copy > p { max-width: 510px; }
+.date { margin-bottom: 11px; color: var(--muted); font-size: 13px; }
+.location { margin: 18px 0 0; color: var(--green); font-weight: 700; }
+.portrait { width: 230px; height: 290px; object-fit: cover; object-position: center 30%; }
+
+.achievements { padding: 12px 0 22px; }
+.section-intro { margin-bottom: 20px; }
+.achievement { display: grid; grid-template-columns: 180px 1fr; align-items: center; gap: 22px; padding: 17px 0; }
+.achievement img { width: 180px; max-height: 100px; object-fit: contain; object-position: left center; }
+.achievement img.logo-dark { background: #111; }
+.achievement p { margin-bottom: 3px; }
+.achievement .result { color: var(--green); font-weight: 700; }
+
+.technology { padding: 16px 0 25px; }
+.technology p { max-width: 690px; }
+.asteroid-image { width: min(100%, 330px); max-height: 200px; margin-top: 15px; object-fit: contain; object-position: left center; }
+
+.contact { padding: 12px 0 34px; }
+.contact p { margin-bottom: 5px; }
+
+@media (max-width: 600px) {
+  .page { width: calc(100% - 32px); }
+  .introduction { grid-template-columns: 1fr; gap: 17px; padding-top: 25px; }
+  .portrait { width: min(100%, 400px); height: 280px; }
+  .achievement { grid-template-columns: 110px 1fr; gap: 14px; }
+  .achievement img { width: 110px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto; }
+}
